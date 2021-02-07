@@ -35,13 +35,19 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel';
+
     export default {
         name: 'Reviews',
         components: {
-            Carousel,
-            Slide
-        }
+      Carousel: () =>
+        import ('vue-carousel')
+        .then(m => m.Carousel)
+        .catch(),
+      Slide: () =>
+        import ('vue-carousel')
+        .then(m => m.Slide)
+        .catch()
+    },
     }
 </script>
 

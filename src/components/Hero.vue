@@ -23,7 +23,10 @@
     padding-bottom: 10px;
     max-height: calc(100vh - 200px);
     height: calc(100vh - 200px);
-    background-image: url('../images/home_photo.jpeg');
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url('../images/home_photo.jpeg');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -44,10 +47,12 @@
     margin-bottom: 5px;
     font-weight: bolder;
     font-size: 5vw;
+    color: white;
 }
 
 .hero-slogan {
     margin: 20px;
+    color: white;
 }
 
 .hero-btn {
@@ -58,6 +63,8 @@
     font-size: 1rem;
     font-weight: bold;
     box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    background: #0077ff;
+    color: white;
 }
 
 @media only screen and (max-width: 1150px) {

@@ -35,7 +35,7 @@
     }
 
     input {
-        padding: 10px;
+        padding: 15px;
         border: 1px solid gray;
         border-radius: 5px;
         margin-bottom: 8px;
@@ -54,9 +54,10 @@
         border-radius: 5px;
         border: none;
         font-weight: bold;
-        padding: 10px;
+        padding: 15px;
         margin-top: 10px;
-        color: #0077ff;
+        color: white;
+        background: #0077ff;
     }
 
     @media only screen and (max-width: 800px) {

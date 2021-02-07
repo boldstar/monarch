@@ -3,6 +3,7 @@
         <div class="reviews-content">
             <h3>Reviews</h3>
             <ClientOnly>
+            <div class="reviews-carousel">
             <carousel 
             :per-page="1" 
             :paginationEnabled="false" 
@@ -29,6 +30,7 @@
                     <span>- Sarah</span>
                 </slide>
             </carousel>
+            </div>
             </ClientOnly>
         </div>
     </div>
@@ -39,15 +41,15 @@
     export default {
         name: 'Reviews',
         components: {
-      Carousel: () =>
-        import ('vue-carousel/src/index')
-        .then(m => m.Carousel)
-        .catch(),
-      Slide: () =>
-        import ('vue-carousel/src/index')
-        .then(m => m.Slide)
-        .catch()
-    },
+            Carousel: () =>
+                import ('vue-carousel/src/index')
+                .then(m => m.Carousel)
+                .catch(),
+            Slide: () =>
+                import ('vue-carousel/src/index')
+                .then(m => m.Slide)
+                .catch()
+        },
     }
 </script>
 
@@ -60,8 +62,15 @@
         padding-top: 20px;
     }
 
-    .VueCarousel-slide {
+    .reviews-content {
         box-sizing: border-box;
-        max-width: 400px;
+        overflow: hidden;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .reviews-carousel {
+        width: auto;
+        box-sizing: border-box;
     }
 </style>

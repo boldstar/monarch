@@ -2,6 +2,7 @@
     <div class="reviews">
         <div class="reviews-content">
             <h3>Reviews</h3>
+            <ClientOnly>
             <carousel 
             :per-page="1" 
             :paginationEnabled="false" 
@@ -28,6 +29,7 @@
                     <span>- Sarah</span>
                 </slide>
             </carousel>
+            </ClientOnly>
         </div>
     </div>
 </template>

@@ -54,4 +54,39 @@ export default {
     width: 100%;
     height: auto;
   }
+
+  @media only screen and (min-width: 600px) {
+    .about-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-step {
+      display: flex;
+      max-height: 400px;
+      max-width: 800px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .about-step:nth-of-type(even) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    .about-step-illustration{
+      box-sizing: border-box;
+    }
+
+    .step-image {
+      background-size: clip;
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      padding: 20px;
+    }
+  }
 </style>

@@ -56,10 +56,10 @@
 <style scoped>
     .reviews {
         text-align: center;
-        min-height: 400px;
         background: lightgray;
         color: white;
-        padding-top: 20px;
+        padding: 20px;
+        padding-bottom: 40px;
     }
 
     .reviews-content {

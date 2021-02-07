@@ -8,7 +8,7 @@
           <p>Scan your home with a 3d camera.</p>
         </div>
         <div class="about-step-illustration">
-          
+          <g-image src="~/images/3d_camera_photo.jpeg" class="step-image"/>
         </div>
       </div>
       <div class="about-step">
@@ -17,6 +17,7 @@
           <p>Build 3d model of home using the scans with software.</p>
         </div>
         <div class="about-step-illustration">
+          <g-image src="~/images/home_photo_outside.jpeg" class="step-image"/>
 
         </div>
       </div>
@@ -26,6 +27,7 @@
           <p>Share 3d model with you for your virtual tours.</p>
         </div>
         <div class="about-step-illustration">
+          <g-image src="~/images/hand_shake.jpeg" class="step-image"/>
 
         </div>
       </div>
@@ -43,6 +45,13 @@ export default {
 
 <style scoped>
   .about-page {
-    padding: 20px
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .step-image {
+    background-size: cover;
+    width: 100%;
+    height: auto;
   }
 </style>

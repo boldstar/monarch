@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import VueCarousel from 'vue-carousel';
+import VueCarousel from 'vue-carousel/src/index';
 
 import DefaultLayout from '~/layouts/Default.vue'
 import Navbar from '~/components/Navbar.vue'

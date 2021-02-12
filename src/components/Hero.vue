@@ -1,7 +1,7 @@
 <template>
     <div class="hero">
         <div class="hero-content">
-            <h1 class="hero-header">Virtual Home Tours</h1>
+            <h1 class="hero-header">360&deg; Virtual Home Tours</h1>
             <p class="hero-slogan">Selling your home just got easier</p>
             <div>
                 <button class="hero-btn">Get my FREE tour</button>
@@ -58,7 +58,7 @@
 .hero-btn {
     display: block;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     font-size: 1rem;
     font-weight: bold;

@@ -1,10 +1,27 @@
 <template>
-    <div class="contact">
-        <h3>Contact</h3>
-        <form action="" class="contact-form">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Phone Number">
+    <div class="contact" id="contact">
+        <h3>FREE 360&deg; Tour Request</h3>
+        <form 
+            class="contact-form"
+            name="free_360_tour"
+            method="post"
+            v-on:submit.prevent="handleSubmit"
+            action="/success/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+        >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+                <label>
+                Don’t fill this out: <input name="bot-field" />
+                </label>
+            </p>
+            <label for="name">Name</label>
+            <input  name="name" v-model="formData.name" type="text" placeholder="Name" :class="{'error': error&&!formData.name}" @change="error = false">
+            <label for="email">Email</label>
+            <input  name="email" v-model="formData.email" type="email" placeholder="Email"  :class="{'error': error&&!formData.email}" @change="error = false">
+            <label for="number">Phone Number</label>
+            <input  name="phone" v-model="formData.phone" type="text" placeholder="Phone Number" :class="{'error': error&&!formData.phone}" @change="error = false">
             <button>Submit</button>
         </form>
     </div>
@@ -12,7 +29,49 @@
 
 <script>
     export default {
-        name: 'Contact'
+        name: 'Contact',
+        data() {
+            return {
+                formData: {},
+                success: false,
+                error: false
+            }
+        },
+        methods: {
+  encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  },
+  handleSubmit(e) {
+    if(!this.formData.name) {
+      this.error = true 
+      return;
+    }
+    if(!this.formData.email) {
+      this.error = true
+      return;
+    }
+    if(!this.formData.phone) {
+      this.error = true
+      return;
+    }
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: this.encode({
+        'form-name': e.target.getAttribute('name'),
+        ...this.formData,
+      }),
+    })
+    .then(() => {
+      this.formData = ""
+      this.$router.push('/')
+      this.success = true
+    })
+    .catch(error => alert(error))
+  }
+}
     }
 </script>
 
@@ -58,6 +117,16 @@
         margin-top: 10px;
         color: white;
         background: #0077ff;
+    }
+
+    label {
+        margin-right: auto;
+        font-size: .8em;
+        margin-bottom: 4px;
+    }
+
+    .error {
+        border: 2px solid red;
     }
 
     @media only screen and (max-width: 800px) {

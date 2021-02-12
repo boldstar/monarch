@@ -57,7 +57,7 @@
     .reviews {
         text-align: center;
         background: lightgray;
-        color: white;
+        color: black;
         padding: 20px;
         padding-bottom: 40px;
     }

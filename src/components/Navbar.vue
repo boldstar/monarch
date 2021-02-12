@@ -1,10 +1,10 @@
 <template>
     <header class="header">
-        <g-link class="logo" to="/">MVT</g-link>
+        <g-link  to="/"><g-image class="logo" src="~/images/mvt_logo.png"/></g-link>
         <font-awesome style="align-self: center" :icon="['fas', 'bars']" @click="showNav"/>
         <nav class="nav" :class="{'mobile-nav': show}">
             <g-link class="nav__link" to="/">Home</g-link>
-            <g-link class="nav__link" to="/about/">About</g-link>
+            <g-link class="nav__link" to="/about/">How It Works</g-link>
         </nav>
     </header>
 </template>
@@ -54,6 +54,9 @@ query {
 
 .logo {
     align-self: center;
+    max-height: 25px;
+    height: 100%;
+    width: auto;
 }
 
 @media only screen and (max-width: 600px) {

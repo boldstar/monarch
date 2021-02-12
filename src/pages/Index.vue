@@ -3,6 +3,7 @@
     <Hero />
     <About />
     <Reviews />
+    <!-- <Filler /> -->
   </Layout>
 </template>
 

@@ -3,7 +3,7 @@
         <div class="footer-content-left">
             <h5>Monarch Virtual Tours</h5>
             <h5>(936) 537-3674</h5>
-            <h5>thomasweems3@gmail.com</h5>
+            <h5>monarch360tours@gmail.com</h5>
         </div>
         <div class="footer-content-right">
             <span>&copy; 2021 Monarch Virtual Tours</span>

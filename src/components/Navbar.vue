@@ -5,6 +5,8 @@
         <nav class="nav" :class="{'mobile-nav': show}">
             <g-link class="nav__link" to="/">Home</g-link>
             <g-link class="nav__link" to="/about/">How It Works</g-link>
+            <g-link class="nav__link" to="/services/">Services</g-link>
+            <button @click="scrollTo" class="free-tour-btn">Free Tour</button>
         </nav>
     </header>
 </template>
@@ -29,6 +31,10 @@ query {
         methods: {
             showNav() {
                 this.show = !this.show
+            },
+            scrollTo() {
+                var elmnt = document.getElementById("contact");
+                elmnt.scrollIntoView();
             }
         }
     }
@@ -57,6 +63,22 @@ query {
     max-height: 25px;
     height: 100%;
     width: auto;
+}
+
+.free-tour-btn {
+    border: 3px solid #0077ff;
+    font-weight: bold;
+    background: white;
+    border-radius: 3px;
+    margin-left: 10px;
+    align-self: center;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+a {
+    align-self: center;
 }
 
 @media only screen and (max-width: 600px) {

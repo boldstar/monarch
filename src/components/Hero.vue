@@ -4,7 +4,7 @@
             <h1 class="hero-header">360&deg; Virtual Home Tours</h1>
             <p class="hero-slogan">Selling your home just got easier</p>
             <div>
-                <button class="hero-btn">Get my FREE tour</button>
+                <button class="hero-btn" @click="scrollTo">Get my FREE tour</button>
             </div>
         </div>
     </div>
@@ -12,7 +12,13 @@
 
 <script>
     export default {
-        
+        name: 'Hero',
+        methods: {
+            scrollTo() {
+                var elmnt = document.getElementById("contact");
+                elmnt.scrollIntoView();
+            }
+        },
     }
 </script>
 

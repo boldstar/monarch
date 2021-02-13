@@ -2,7 +2,8 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faHome, faCameraRetro, faShapes, faVideo } from '@fortawesome/free-solid-svg-icons'
+import { faSquare } from '@fortawesome/free-regular-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import VueCarousel from 'vue-carousel/src/index';
 
@@ -14,9 +15,10 @@ import Reviews from '~/components/Reviews.vue'
 import Contact from '~/components/Contact.vue'
 import Footer from '~/components/Footer.vue'
 import Filler from '~/components/Filler.vue'
+import Services from '~/components/Services.vue'
 
 config.autoAddCss = false;
-library.add(faBars)
+library.add(faBars, faHome, faCameraRetro, faShapes, faVideo, faSquare)
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -28,6 +30,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Contact', Contact)
   Vue.component('Footer', Footer)
   Vue.component('Filler', Filler)
+  Vue.component('Services', Services)
   Vue.component('font-awesome', FontAwesomeIcon)
 
   // Plugins

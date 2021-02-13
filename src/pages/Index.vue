@@ -4,6 +4,7 @@
     <About />
     <Reviews />
     <!-- <Filler /> -->
+    <Services />
   </Layout>
 </template>
 
